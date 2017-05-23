@@ -2,13 +2,14 @@ var express = require('express');
 var app = express();
 
 app.set('view engine', 'ejs');
+app.use('/assets', express.static('assets'));
 
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '/index.html');
+  res.render('index');
 });
 
 app.get('/contact', function(req, res){
-  res.sendFile(__dirname + '/contact.html');
+  res.render('contact');
 });
 
 app.get('/api/ninjas', function(req, res){

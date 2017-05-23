@@ -12,14 +12,15 @@
     </style>
   </head>
   <body>
-      <h1>Welcome to your profile <%= person %></h1>
-      <p>Age : <%= data.age%></p>
-      <p>Job : <%= data.job%></p>
-      <p>Hobbies</p>
-        <ul>
-          <% data.hobbies.forEach(function(item){ %>
-              <li><%= item %></li>
-          <% }); %>
-        </ul>
+    <% include partials/navbar.ejs %>
+    <h1>Welcome to your profile <%= person %></h1>
+    <p>Age : <%= data.age%></p>
+    <p>Job : <%= data.job%></p>
+    <p>Hobbies</p>
+      <ul>
+        <% data.hobbies.forEach(function(item){ %>
+            <li><%= item %></li>
+        <% }); %>
+      </ul>
   </body>
 </html>
